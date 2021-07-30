@@ -1,0 +1,12 @@
+<svg id="menu_2_" data-name="menu (2)" xmlns="http://www.w3.org/2000/svg" width="384" height="277.332" viewBox="0 0 384 277.332">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #c1a57b;
+      }
+    </style>
+  </defs>
+  <path id="Tracé_1" data-name="Tracé 1" class="cls-1" d="M368,154.668H16a16,16,0,0,1,0-32H368a16,16,0,0,1,0,32Zm0,0"/>
+  <path id="Tracé_2" data-name="Tracé 2" class="cls-1" d="M368,32H16A16,16,0,0,1,16,0H368a16,16,0,0,1,0,32Zm0,0"/>
+  <path id="Tracé_3" data-name="Tracé 3" class="cls-1" d="M368,277.332H16a16,16,0,0,1,0-32H368a16,16,0,1,1,0,32Zm0,0"/>
+</svg>

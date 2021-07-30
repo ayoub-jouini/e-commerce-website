@@ -10,7 +10,7 @@ const NavBarMenu = ({ menu, menuDropDown }) => {
                     {menu.map((e, key) => {
                         if (e === 'CATEGORIES') {
                             return (
-                                <li className="nav-item dropdown">
+                                <li className="nav-item dropdown" key={key}>
                                     <a className="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                         {e}
                                     </a>

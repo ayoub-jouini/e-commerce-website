@@ -7,7 +7,7 @@ const NavBarDropdown = ({ dropDown }) => {
             {dropDown.map((d, key) => {
                 return (
                     <Link to={`/${d}`} key={key} className="NAVBAR-LINK">
-                        <li><a className="dropdown-item" href="#">{d}</a></li>
+                        <li><a className="dropdown-item">{d}</a></li>
                     </Link>
                 )
             })}

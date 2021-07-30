@@ -1,8 +1,10 @@
-{
-    "img-slid": [
-        "felipe-galvan-AhfrA5VQNpM-unsplash.jpg",
-        "hannah-morgan-ycVFts5Ma4s-unsplash.jpg",
-        "keagan-henman-xPJYL0l5Ii8-unsplash.jpg",
-        "nimble-made-DRM_6zFkPFw-unsplash.jpg"
-    ]
-}
+[
+    {
+        "img-slid": [
+            "felipe-galvan-AhfrA5VQNpM-unsplash.jpg",
+            "hannah-morgan-ycVFts5Ma4s-unsplash.jpg",
+            "keagan-henman-xPJYL0l5Ii8-unsplash.jpg",
+            "nimble-made-DRM_6zFkPFw-unsplash.jpg"
+        ]
+    }
+]

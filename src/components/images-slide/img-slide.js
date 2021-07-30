@@ -1,7 +1,12 @@
 import React from 'react';
 import './img-slide.css';
+import useFetch from '../../services/useFetch';
+import LoadingSpinner from '../loading-spinner/LoadingSpiner';
 
 const IMGSlide = () => {
+    const { data, error, loading } = useFetch('./asset/images/images.json');
+    if (error) throw error;
+    if (loading) return <LoadingSpinner />
     return (
         <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
             <div class="IMGSlid-div carousel-inner">

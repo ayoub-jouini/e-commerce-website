@@ -1,11 +1,20 @@
 import React from 'react';
 import './product.css';
 
-const Product = ({ name, price }) => {
+const Product = ({ name, price, image, category }) => {
+    const style = {
+        backgroundImage: `url("./asset/images/${image}")`
+    }
     return (
         <div className="PRODUCT-CONTAINER">
-            <h1>{name}</h1>
-            <p>{price}</p>
+            <div className="PRODUCT-IMG" style={style}>
+
+            </div>
+            <div className="Product-TXT">
+                <h3>{name}</h3>
+                <h5>{category}</h5>
+                <p><b>{price} DT</b></p>
+            </div>
         </div>
     );
 }

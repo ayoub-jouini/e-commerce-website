@@ -10,11 +10,21 @@ const BestSeller = () => {
     if (loading) return <LoadingSpinner />
     return (
         <div className="BESTSELLER-CONTAINER">
-            {
-                data && data.length > 0 && data.map((d, key) => {
-                    if (d.bestSeller === true) return <Product key={key} name={d.name} price={d.price} />
-                })
-            }
+            <div className="BESTSELLER-TITlE">
+                <h1>BEST-SELLER</h1>
+            </div>
+            <div className="BESTSELLET-PRODUCTS">
+                {
+                    data && data.length > 0 && data.map((d, key) => {
+                        if (d.bestSeller === true) return <Product key={key}
+                            name={d.name}
+                            price={d.price}
+                            image={d.image}
+                            category={d.category}
+                        />
+                    })
+                }
+            </div>
         </div>
     );
 }

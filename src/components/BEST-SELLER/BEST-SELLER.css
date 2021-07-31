@@ -17,14 +17,20 @@
     color: #30475E;
 }
 @media(max-width:768px){
-    .BESTSELLER-CONTAINER {
+    .BESTSELLER-CONTAINER  {
+        height: 450px;
         padding: 0 5%;
+    }
+    .BESTSELLET-PRODUCTS {
         height: 400px;
     }
     
 }
 @media(max-width:426px){
     .BESTSELLER-CONTAINER  {
+        height: 2250px;
+    }
+    .BESTSELLET-PRODUCTS  {
       height: 2200px;
       flex-direction: column;
       justify-content: space-around;

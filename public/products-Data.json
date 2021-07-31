@@ -15,7 +15,9 @@
             "xl"
         ],
         "quantity": 30,
-        "Composition": "95% COTTON + 5% SPANDEX"
+        "Composition": "95% COTTON + 5% SPANDEX",
+        "selling": 20,
+        "bestSeller": true
     },
     {
         "Reference": "S1000",
@@ -33,7 +35,9 @@
             "42"
         ],
         "quantity": 10,
-        "Composition": "95% COTTON + 5% SPANDEX"
+        "Composition": "95% COTTON + 5% SPANDEX",
+        "selling": 10,
+        "bestSeller": false
     },
     {
         "Reference": "G1000",
@@ -51,7 +55,9 @@
             "xl"
         ],
         "quantity": 100,
-        "Composition": "95% COTTON + 5% SPANDEX"
+        "Composition": "95% COTTON + 5% SPANDEX",
+        "selling": 30,
+        "bestSeller": true
     },
     {
         "Reference": "M2000",
@@ -69,7 +75,9 @@
             "xl"
         ],
         "quantity": 30,
-        "Composition": "95% COTTON + 5% SPANDEX"
+        "Composition": "95% COTTON + 5% SPANDEX",
+        "selling": 5,
+        "bestSeller": false
     },
     {
         "Reference": "S2000",
@@ -87,7 +95,9 @@
             "42"
         ],
         "quantity": 5,
-        "Composition": "95% COTTON + 5% SPANDEX"
+        "Composition": "95% COTTON + 5% SPANDEX",
+        "selling": 40,
+        "bestSeller": true
     },
     {
         "Reference": "G2000",
@@ -105,6 +115,8 @@
             "xl"
         ],
         "quantity": 2,
-        "Composition": "95% COTTON + 5% SPANDEX"
+        "Composition": "95% COTTON + 5% SPANDEX",
+        "selling": 25,
+        "bestSeller": true
     }
 ]

@@ -4,7 +4,7 @@
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
     border-style: solid;
     border-width: 10px;
-    border-color: #30475E;
+    border-color: #222831;
 }
 .PRODUCT-IMG {
     width: 100%;
@@ -18,9 +18,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color:  #30475E;
+    color:  #222831;
     background-color: #ECECEC;
     cursor: pointer;
+}
+a{
+    text-decoration: none;
 }
 @media(max-width:768px){
     .Product-TXT h3{

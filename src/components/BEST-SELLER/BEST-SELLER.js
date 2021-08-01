@@ -21,6 +21,7 @@ const BestSeller = () => {
                             price={d.price}
                             image={d.image}
                             category={d.category}
+                            Reference={d.Reference}
                         />
                     })
                 }

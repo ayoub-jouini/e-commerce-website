@@ -5,7 +5,8 @@ import LoadingSpinner from '../loading-spinner/LoadingSpiner';
 import "./BEST-SELLER.css";
 
 const BestSeller = () => {
-    const { data, error, loading } = useFetch('./products-Data.json');
+    const { data, error, loading } = useFetch('http://localhost:5000/api/products/bestSeller');
+    console.log(data)
     if (error) throw error;
     if (loading) return <LoadingSpinner />
     return (
@@ -15,8 +16,8 @@ const BestSeller = () => {
             </div>
             <div className="BESTSELLET-PRODUCTS">
                 {
-                    data && data.length > 0 && data.map((d, key) => {
-                        if (d.bestSeller === true) return <Product key={key}
+                    data.bestProducts && data.bestProducts.length > 0 && data.bestProducts.map((d, key) => {
+                        return <Product key={key}
                             name={d.name}
                             price={d.price}
                             image={d.image}

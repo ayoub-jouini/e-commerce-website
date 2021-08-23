@@ -16,4 +16,6 @@ router.get('/:category/:Reference', products.getProductByRef);
 
 router.patch('/:category/:Reference', products.updateProduct);
 
+router.delete('/:category/:Reference', products.deleteProduct);
+
 module.exports = router;

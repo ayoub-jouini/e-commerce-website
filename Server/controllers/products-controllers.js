@@ -252,8 +252,10 @@ const updateProduct = (req, res, next) => {
 }
 
 //delete product 
-const deleteProduct = (req, res, next){
-
+const deleteProduct = (req, res, next) => {
+    const productRef = req.params.Reference;
+    products = products.filter(p => p.Reference !== productRef);
+    res.status(200).json({ message: 'product deleted' });
 }
 
 exports.allProducts = allProducts;

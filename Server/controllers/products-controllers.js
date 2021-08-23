@@ -122,18 +122,20 @@ const products = [
         "bestSeller": true
     }
 ];
-
+//get all produsts
 const allProducts = (req, res, next) => {
     res.json({ products });
 }
 
-const bestSeller = (req, res, next) => {
+//get bestseller products
+const bestSellerProducts = (req, res, next) => {
     const bestProducts = products.filter(p => {
         return p.bestSeller == true;
     })
     res.json({ bestProducts })
 }
 
+//get produst by category
 const productsCategory = (req, res, next) => {
     const productcat = req.params.category;
     const productsCat = products.filter(p => {
@@ -142,6 +144,7 @@ const productsCategory = (req, res, next) => {
     res.json({ productsCat })
 }
 
+//get products by Reference
 const getProductByRef = (req, res, next) => {
     const productReference = req.params.Reference;
     const product = products.find(p => {
@@ -155,7 +158,71 @@ const getProductByRef = (req, res, next) => {
     res.json({ product })
 }
 
+//verfi if the products is a bestseller
+const bestSellerVerification = (selling) => {
+    let bestSellerNb = [];
+
+    for (let i = 0; i < products.length; i++) {
+        if (products[i].selling < selling && products[i].bestSeller == true) {
+            bestSellerNb.push(i);
+        }
+    }
+
+    let min = -1;
+    if (bestSellerNb.length !== 0) {
+        min = bestSellerNb[0];
+        for (let i = 1; i < bestSellerNb.length; i++) {
+            if (products[bestSellerNb[i]].selling < min) {
+                min = bestSellerNb[i]
+            }
+        }
+    }
+    let bestSeller = false;
+    if (min !== -1) {
+        products[min].bestSeller = false;
+        bestSeller = true;
+    }
+
+    return bestSeller;
+}
+
+//create and post a product
+const createProduct = (req, res, next) => {
+    const { Reference,
+        name,
+        category,
+        image,
+        gender,
+        price,
+        description,
+        color,
+        size,
+        quantity,
+        Composition,
+        selling } = req.body;
+
+    const bestSeller = bestSellerVerification(selling);
+    const createdProduct = {
+        Reference,
+        name,
+        category,
+        image,
+        gender,
+        price,
+        description,
+        color,
+        size,
+        quantity,
+        Composition,
+        selling,
+        bestSeller
+    }
+    products.push(createdProduct);
+    res.status(201).json({ product: createdProduct });
+}
+
 exports.allProducts = allProducts;
-exports.bestSeller = bestSeller;
+exports.bestSeller = bestSellerProducts;
 exports.getProductByRef = getProductByRef;
 exports.productsCategory = productsCategory;
+exports.createProduct = createProduct;

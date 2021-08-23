@@ -221,8 +221,45 @@ const createProduct = (req, res, next) => {
     res.status(201).json({ product: createdProduct });
 }
 
+//update a product 
+const updateProduct = (req, res, next) => {
+    const {
+        name,
+        image,
+        price,
+        description,
+        color,
+        size,
+        quantity,
+        Composition,
+        selling } = req.body;
+    const productRef = req.params.Reference;
+    const updateProduct = { ...products.find(p => p.Reference === productRef) };
+    const productIndex = products.findIndex(p => p.Reference === productRef);
+    updateProduct.name = name;
+    updateProduct.image = image;
+    updateProduct.price = price;
+    updateProduct.description = description;
+    updateProduct.color = color;
+    updateProduct.size = size;
+    updateProduct.quantity = quantity;
+    updateProduct.Composition = Composition;
+    updateProduct.selling = selling;
+
+    products[productIndex] = updateProduct;
+
+    res.status(200).json({ product: updateProduct });
+}
+
+//delete product 
+const deleteProduct = (req, res, next){
+
+}
+
 exports.allProducts = allProducts;
 exports.bestSeller = bestSellerProducts;
 exports.getProductByRef = getProductByRef;
 exports.productsCategory = productsCategory;
 exports.createProduct = createProduct;
+exports.updateProduct = updateProduct;
+exports.deleteProduct = deleteProduct;

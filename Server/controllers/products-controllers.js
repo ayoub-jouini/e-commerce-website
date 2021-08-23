@@ -1,6 +1,6 @@
 const HttpError = require('../models/http-error');
 
-const products = [
+let products = [
     {
         "Reference": "M1000",
         "name": "maryoul",

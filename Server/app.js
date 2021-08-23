@@ -5,6 +5,11 @@ const app = express();
 
 const productRoute = require('./routes/product-routes');
 
+app.use(express.json());
+app.use(express.urlencoded({
+    extended: true
+}));
+
 app.use('/api/products', productRoute);
 
 app.use((error, req, res, next) => {

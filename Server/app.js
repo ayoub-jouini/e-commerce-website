@@ -4,6 +4,7 @@ const bodyParser = require('body-parser');
 const app = express();
 
 const productRoute = require('./routes/product-routes');
+const HttpError = require('./models/http-error');
 
 app.use(express.json());
 app.use(express.urlencoded({
@@ -11,6 +12,11 @@ app.use(express.urlencoded({
 }));
 
 app.use('/api/products', productRoute);
+
+app.use((req, res, next) => {
+    const error = HttpError('could not found this route.', 404);
+    throw error;
+})
 
 app.use((error, req, res, next) => {
     if (res.headerSent) {
